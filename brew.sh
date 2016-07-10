@@ -49,18 +49,18 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+# brew install ringojs
+# brew install narwhal
 
 # Install Python
 brew install python
 brew install python3
 
 # Install ruby-build and rbenv
-brew install ruby-build
-brew install rbenv
-LINE='eval "$(rbenv init -)"'
-grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+# brew install ruby-build
+# brew install rbenv
+# LINE='eval "$(rbenv init -)"'
+# grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -132,8 +132,8 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku-toolbelt
-heroku update
+#brew install heroku-toolbelt
+#heroku update
 
 # Install Cask
 brew install caskroom/cask/brew-cask
@@ -142,26 +142,47 @@ brew tap caskroom/versions
 # Core casks
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
+# brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text3
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
+# brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" slack
+# brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" 1password
+# brew cask install --appdir="/Applications" 1password
 #brew cask install --appdir="/Applications" gimp
 #brew cask install --appdir="/Applications" inkscape
+brew cask install --appdir="/Applications" spectacle # Window repositioning using the keyboard
+brew cask install --appdir="/Applications" google-drive
+brew cask install --appdir="/Applications" google-hangouts
+brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" backblaze
+brew cask install --appdir="/Applications" sourcetree
+brew cask install --appdir="/Applications" github-desktop
+brew cask install --appdir="/Applications" bbedit
+brew cask install --appdir="/Applications" chronosync
+brew cask install --appdir="/Applications" mendeley-desktop
+brew cask install --appdir="/Applications" r
+brew cask install --appdir="/Applications" omnigraffle
+brew cask install --appdir="/Applications" sequel-pro
+brew cask install --appdir="/Applications" coda
+brew cask install --appdir="/Applications" superduper
+brew cask install --appdir="/Applications" the-unarchiver
+brew cask install --appdir="/Applications" vlc
+brew cask install --appdir="/Applications" transmit
+brew cask install --appdir="/Applications" vyprvpn
+brew cask install --appdir="/Applications" hazel
+
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
@@ -170,8 +191,8 @@ brew cask install --appdir="/Applications" 1password
 brew cask alfred link
 
 # Install Docker, which requires virtualbox
-brew install docker
-brew install boot2docker
+#brew install docker
+#brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package

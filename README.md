@@ -53,11 +53,11 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Single Setup Script](#single-setup-script)
 * [bootstrap.sh script](#bootstrapsh-script)
     * Syncs dev-setup to your local home directory `~`
-* [osxprep.sh script](#osxprepsh-script)
+* [macosprep.sh script](#macosprepsh-script)
     * Updates OS X and installs Xcode command line tools
 * [brew.sh script](#brewsh-script)
     * Installs common Homebrew formulae and apps
-* [osx.sh script](#osxsh-script)
+* [macos.sh script](#macossh-script)
     * Sets up OS X defaults geared towards developers
 * [pydata.sh script](#pydatash-script)
     * Sets up python for data analysis
@@ -167,13 +167,13 @@ Run all:
 
     $ ./.dots all
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
+Run `bootstrap.sh`, `macosprep.sh`, `brew.sh`, and `macos.sh`:
 
-    $ ./.dots bootstrap osxprep brew osx
+    $ ./.dots bootstrap macosprep brew osx
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
+Run `bootstrap.sh`, `macosprep.sh`, `brew.sh`, and `macos.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
 
-    $ ./.dots bootstrap osxprep brew osx pydata aws datastores
+    $ ./.dots bootstrap macosprep brew osx pydata aws datastores
 
 #### Running without Git
 
@@ -185,11 +185,11 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
     * Runs specified scripts
 * [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
     * Syncs dev-setup to your local home directory `~`
-* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
+* [macosprep.sh](https://github.com/donnemartin/dev-setup/blob/master/macosprep.sh)
     * Updates OS X and installs Xcode command line tools
 * [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
     * Installs common Homebrew formulae and apps
-* [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
+* [macos.sh](https://github.com/donnemartin/dev-setup/blob/master/macos.sh)
     * Sets up OS X defaults geared towards developers
 * [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
     * Sets up python for data analysis
@@ -280,18 +280,18 @@ gpip(){
 
 You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/donnemartin/dev-setup/fork).
 
-### osxprep.sh script
+### macosprep.sh script
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
   <br/>
 </p>
 
-Run the `osxprep.sh` script:
+Run the `macosprep.sh` script:
 
-    $ ./osxprep.sh
+    $ ./macosprep.sh
 
-`osxprep.sh` will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, `osxprep.sh` will then [Install Xcode Command Line Tools](#install-xcode-command-line-tools).
+`macosprep.sh` will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, `macosprep.sh` will then [Install Xcode Command Line Tools](#install-xcode-command-line-tools).
 
 If you want to go the manual route, you can also install all updates by running "App Store", selecting the "Updates" icon, then updating both the OS and installed apps.
 
@@ -303,7 +303,7 @@ If you are running **OS X 10.9 Mavericks or later**, then you can install the Xc
 
     $ xcode-select --install
 
-**Note**: the `osxprep.sh` script executes this command.
+**Note**: the `macosprep.sh` script executes this command.
 
 Running the command above will display a dialog where you can either:
 * Install Xcode and the command line tools
@@ -335,20 +335,20 @@ The `brew.sh` script takes awhile to complete, as some formulae need to be insta
 
 **For your terminal customization to take full effect, quit and re-start the terminal**
 
-### osx.sh script
+### macos.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/macos.png">
   <br/>
 </p>
 
-When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `osx.sh` script also configures common third-party apps such Sublime Text and Chrome.
+When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `macos.sh` script also configures common third-party apps such Sublime Text and Chrome.
 
-**Note**: **I strongly encourage you read through the commented [osx.sh source file](https://github.com/donnemartin/dev-setup/blob/master/osx.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
+**Note**: **I strongly encourage you read through the commented [macos.sh source file](https://github.com/donnemartin/dev-setup/blob/master/macos.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
 
-Run the `osx.sh` script:
+Run the `macos.sh` script:
 
-    $ ./osx.sh
+    $ ./macos.sh
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
@@ -454,7 +454,7 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 #### Configuration
 
-The [osx.sh script](#osxsh-script) contains Sublime Text configurations.
+The [macos.sh script](#osxsh-script) contains Sublime Text configurations.
 
 #### Soda Theme
 
@@ -543,7 +543,7 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 #### Configuration
 
-The [bootstrap.sh script](#bootstrapsh-script) and [osx.sh script](#osxsh-script) contain terminal customizations.
+The [bootstrap.sh script](#bootstrapsh-script) and [macos.sh script](#osxsh-script) contain terminal customizations.
 
 ### iTerm2
 
